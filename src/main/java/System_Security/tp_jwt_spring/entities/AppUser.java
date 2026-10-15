@@ -8,7 +8,7 @@ import org.hibernate.annotations.AnyDiscriminatorImplicitValues;
 @NoArgsConstructor
 @Data @AllArgsConstructor @Entity
 
-@Table(name = "user")
+@Table(name = "users")
 public class AppUser {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
