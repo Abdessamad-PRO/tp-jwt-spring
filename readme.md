@@ -202,13 +202,15 @@ La base étant **en mémoire**, les données sont perdues à chaque redémarrage
 
 - Résultat attendu : `200 OK` – `Utilisateur cree`
 
-![Register](docs/images/01-register.png)
+![Register](<img width="677" height="441" alt="Capture d&#39;écran 2026-10-15 173502" src="https://github.com/user-attachments/assets/1e5ca34f-7bb2-4c43-835c-cb4082ae0ef4" />
+)
 
 ### Étape 2 : Vérifier l'utilisateur en base (mot de passe haché)
 
 La console H2 montre que le mot de passe n'est **pas stocké en clair** mais haché avec BCrypt (préfixe `$2a$10$...`), avec le rôle `USER`.
 
-![H2 Console](docs/images/02-h2-users.png)
+![H2 Console](<img width="693" height="277" alt="Capture d&#39;écran 2026-10-15 174408" src="https://github.com/user-attachments/assets/e176d9ee-233d-4d86-8fa6-37c6478ea99b" />
+)
 
 ### Étape 3 : Se connecter et récupérer le token
 
@@ -216,7 +218,8 @@ La console H2 montre que le mot de passe n'est **pas stocké en clair** mais hac
 - Même corps JSON que l'inscription
 - Résultat attendu : `200 OK` avec un objet `{ "token": "..." }`
 
-![Login](docs/images/03-login.png)
+![Login](<img width="680" height="387" alt="Capture d&#39;écran 2026-10-15 174307" src="https://github.com/user-attachments/assets/0d99fa9f-9d1d-4ea5-a8ac-eebb7401cdc1" />
+)
 
 ### Étape 4 : Appeler `/api/hello` avec le token
 
@@ -224,7 +227,8 @@ La console H2 montre que le mot de passe n'est **pas stocké en clair** mais hac
 - Onglet **Authorization** → Type **Bearer Token** → coller le token
 - Résultat attendu : `200 OK` – `Bienvenue dans l'API securisee`
 
-![Hello](docs/images/04-hello.png)
+![Hello](<img width="669" height="369" alt="Capture d&#39;écran 2026-10-15 174524" src="https://github.com/user-attachments/assets/c9de0b88-6f9f-4ea7-b4fa-e70f2fabf82a" />
+)
 
 ### Étape 5 : Appeler `/api/profile` avec le token
 
@@ -232,7 +236,8 @@ La console H2 montre que le mot de passe n'est **pas stocké en clair** mais hac
 - Même configuration Bearer Token
 - Résultat attendu : `200 OK` – `Utilisateur connecte : email@enset.ma`
 
-![Profile](docs/images/05-profile.png)
+![Profile](<img width="676" height="377" alt="Capture d&#39;écran 2026-10-15 174547" src="https://github.com/user-attachments/assets/fd98e5dd-eeec-41a8-811d-cf19337171ad" />
+)
 
 ### Étape 6 : Tester sans token (cas négatif)
 
@@ -278,6 +283,6 @@ curl http://localhost:8080/api/profile \
 
 ## 10. Auteur
 
-**Abdessamad**
+**Abdessamad AIT EL MAHJOUB**
 Master Systèmes Distribués et Intelligence Artificielle (SDIA)
 ENSET Mohammedia — Université Hassan II de Casablanca
